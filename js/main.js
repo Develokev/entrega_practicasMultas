@@ -31,11 +31,11 @@ search.addEventListener('submit', (ev) => {
 
 //* FUNCIONES +++++++++++++++++++++++++++++++++++++++
 //!Función validar
-const validateStatus=()=>{
-    altaBaja = arrayPropietarios.find((item) => item.alta == alta)
+const validateStatus=async(nombre, alta)=>{
+    let altaBaja = arrayPropietarios.find((item) => item.alta == alta)
     console.log(altaBaja);
         if(altaBaja == false) {
-            throw(`El propietario no está dando de alta en sistema`)
+            throw(`El propietario ${nombre} no está dando de alta en sistema`)
         }   else {
             console.log(altaBaja);
             return(altaBaja)
